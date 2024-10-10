@@ -1,3 +1,38 @@
+# AWS RESOURCE DESCRIBER
+
+This project is made to describe AWS resources and export them in a excel file that can be used for comparing purpose.
+NOTE : still under development. Code is open and you can use to make changes maybe make it better.
+
+```
+/aws-resource-describer
+│
+├── /backend
+│   ├── /app
+│   │   ├── __init__.py
+│   │   ├── models.py
+│   │   ├── routes.py
+│   │   ├── services.py
+│   │   ├── utils.py
+│   │   └── config.py
+│   ├── /migrations
+│   ├── requirements.txt
+│   └── run.py
+│
+├── /frontend
+│   ├── /public
+│   ├── /src
+│   │   ├── /components
+│   │   ├── /pages
+│   │   ├── /services
+│   │   ├── /utils
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── package.json
+│
+├── .gitignore
+├── README.md
+└── docker-compose.yml
+```
 flask db init
 flask db migrate -m "Initial migration."
 flask db upgrade

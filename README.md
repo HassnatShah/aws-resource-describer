@@ -3,6 +3,24 @@
 This project is made to describe AWS resources and export them in a excel file that can be used for comparing purpose.
 NOTE : still under development. Code is open and you can use to make changes maybe make it better.
 
+docker-compose exec backend flask db init
+docker-compose exec backend flask db migrate
+docker-compose exec backend flask db upgrade
+
+docker-compose up --build -d
+
+# Initialize migrations
+flask db init
+
+# Generate a migration script after changing models
+flask db migrate -m "Add Resource model"
+
+# Apply migrations to the database
+flask db upgrade
+
+
+packagelock is missing
+
 ```
 /aws-resource-describer
 │

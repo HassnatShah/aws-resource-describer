@@ -13,10 +13,42 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
-      - postgres_network
+      - app_network
+
+  backend:
+    build:
+      context: ./backend
+    container_name: flask_backend
+    environment:
+      - SECRET_KEY=ABCDEFGHIJKLMNOPQRSTUVWXYZ
+      - DATABASE_URL=postgresql://your_username:your_password@db:5432/your_database
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    volumes:
+      - ./backend:/app
+    networks:
+      - app_network
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: react_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+    networks:
+      - app_network
 
 volumes:
   postgres_data:
 
 networks:
-  postgres_network:
+  app_network:

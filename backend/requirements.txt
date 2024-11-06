@@ -7,3 +7,4 @@ Flask-CORS>=3.0.10
 boto3>=1.26.158
 psycopg2-binary>=2.9.6
 python-dotenv>=1.0.0
+Flask-Caching>=2.0.0

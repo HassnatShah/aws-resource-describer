@@ -1,37 +1,23 @@
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
+// frontend/src/App.js
 
 import React from 'react';
-import ResourceList from './components/ResourceList';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ServicesList from './components/ServicesList';
+import SubservicesList from './components/SubservicesList';
+import ServiceDetails from './components/ServiceDetails';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <ResourceList />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<ServicesList />} />
+          <Route path="/services/:serviceName" element={<SubservicesList />} />
+          <Route path="/services/:serviceName/:subserviceName" element={<ServiceDetails />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

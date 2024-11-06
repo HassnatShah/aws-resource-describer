@@ -1,0 +1,31 @@
+
+.resource-list {
+    max-width: 800px;
+    margin: auto;
+}
+
+.instance-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.instance-header {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.instance-details {
+    margin-top: 1rem;
+}
+
+.section {
+    margin-top: 1rem;
+}
+
+.section h4 {
+    margin-bottom: 0.5rem;
+}

@@ -7,7 +7,7 @@ docker-compose exec backend flask db init
 docker-compose exec backend flask db migrate
 docker-compose exec backend flask db upgrade
 
-docker-compose up --build -d
+docker compose up --build -d
 
 # Initialize migrations
 flask db init

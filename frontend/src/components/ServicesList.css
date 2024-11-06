@@ -1,0 +1,32 @@
+/* frontend/src/components/ServicesList.css */
+
+.services-list {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.services-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.services-list li {
+    margin: 1rem 0;
+}
+
+.service-link {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.service-link:hover {
+    color: #0056b3;
+}
+
+.error {
+    color: red;
+}
